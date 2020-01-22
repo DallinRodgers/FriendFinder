@@ -3,6 +3,8 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/234b6f7932.js" crossorigin="anonymous"></script>
+  
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -11,12 +13,66 @@
     <title>Friend Finder Survey</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container">
+`   <h1>Survey Questions</h1>
+    <hr>
+    <h3>About You</h3>
+    <h4>Name (Required)</h4>
+    <input type="text" id="name" class="form-control" required>
+    <h4>Link to Photo Image (Required)</h4>
+    <input type="text" id="photo" class="form-control" required>
+    <hr>
+      <div class="question">
+        <h3><strong>Question 1</strong></h3>
+        <h4>Your mind is always bussing with unexplored ideas and plans.</h4>
+        <select id="q1" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3><strong>Question 2</strong></h3>
+        <h4>Your mind is always bussing with unexplored ideas and plans.</h4>
+        <select id="q2" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <button class="btn btn-primary btn-lg btn-block mt-3" type="submit" id="submit"><i class="fas fa-check-circle mr-2"></i>Submit</button>
+    </div>
 
+    <footer>
+        <div class="container mt-3">
+            <a href="#">API Friend List</a>
+        </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+      $("#submit").on("click", function(event){
+        event.preventDefault();
+        // console.log("Submit clicked");
+        var friendData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val()
+          ]
+        };
+        console.log(friendData);
+      })
+    </script>
   </body>
 </html>

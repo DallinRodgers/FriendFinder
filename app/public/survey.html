@@ -1,27 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <script src="https://kit.fontawesome.com/234b6f7932.js" crossorigin="anonymous"></script>
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <script
+      src="https://kit.fontawesome.com/234b6f7932.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
     <title>Friend Finder Survey</title>
   </head>
   <body>
     <div class="container">
-`   <h1>Survey Questions</h1>
-    <hr>
-    <h3>About You</h3>
-    <h4>Name (Required)</h4>
-    <input type="text" id="name" class="form-control" required>
-    <h4>Link to Photo Image (Required)</h4>
-    <input type="text" id="photo" class="form-control" required>
-    <hr>
+      `
+      <h1>Survey Questions</h1>
+      <hr />
+      <h3>About You</h3>
+      <h4>Name (Required)</h4>
+      <input type="text" id="name" class="form-control" required />
+      <h4>Link to Photo Image (Required)</h4>
+      <input type="text" id="photo" class="form-control" required />
+      <hr />
       <div class="question">
         <h3><strong>Question 1</strong></h3>
         <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
@@ -36,7 +48,10 @@
       </div>
       <div class="question">
         <h3><strong>Question 2</strong></h3>
-        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+        <h4>
+          Generally speaking, you rely more on your experience than your
+          imagination.
+        </h4>
         <select id="q2" class="chosen-select">
           <option value="">Select an option</option>
           <option value="1">1 (Strongly Disagree)</option>
@@ -46,33 +61,159 @@
           <option value="5">5 (Strongly Agree)</option>
         </select>
       </div>
-      <button class="btn btn-primary btn-lg btn-block mt-3" type="submit" id="submit"><i class="fas fa-check-circle mr-2"></i>Submit</button>
+      <div class="question">
+        <h3><strong>Question 3</strong></h3>
+        <h4>
+          You find it easy to stay relaxed and focused even when there is some
+          pressure.
+        </h4>
+        <select id="q3" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3><strong>Question 4</strong></h3>
+        <h4>
+          You find it easy to stay relaxed and focused even when there is some
+          pressure.
+        </h4>
+        <select id="q4" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3><strong>Question 5</strong></h3>
+        <h4>People can rarely upset you.</h4>
+        <select id="q5" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3><strong>Question 6</strong></h3>
+        <h4>
+          It is often difficult for you to relate to other people’s feelings.
+        </h4>
+        <select id="q6" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3><strong>Question 7</strong></h3>
+        <h4>
+          In a discussion, truth should be more important than people’s
+          sensitivities.
+        </h4>
+        <select id="q7" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3><strong>Question 8</strong></h3>
+        <h4>You rarely get carried away by fantasies and ideas.</h4>
+        <select id="q8" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3><strong>Question 9</strong></h3>
+        <h4>
+          You think that everyone’s views should be respected regardless of
+          whether they are supported by facts or not.
+        </h4>
+        <select id="q9" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3><strong>Question 10</strong></h3>
+        <h4>
+          You feel more energetic after spending time with a group of people.
+        </h4>
+        <select id="q10" class="chosen-select">
+          <option value="">Select an option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <button
+        class="btn btn-primary btn-lg btn-block mt-3"
+        type="submit"
+        id="submit"
+      >
+        <i class="fas fa-check-circle mr-2"></i>Submit
+      </button>
     </div>
 
     <footer>
-        <div class="container mt-3">
-            <a href="/api/friends">API Friend List</a>
-        </div>
+      <div class="container mt-3">
+        <a href="/api/friends">API Friend List</a>
+      </div>
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
     <script>
-      $("#submit").on("click", function(event){
+      $("#submit").on("click", function(event) {
         event.preventDefault();
         // console.log("Submit clicked");
         var friendData = {
           name: $("#name").val(),
           photo: $("#photo").val(),
-          scores: [
-            $("#q1").val(),
-            $("#q2").val()
-          ]
+          scores: [$("#q1").val(), $("#q2").val()]
         };
         console.log(friendData);
-      })
+        $.post("/api/friends", friendData, function(data) {
+          console.log("show friend");
+        });
+      });
     </script>
   </body>
 </html>

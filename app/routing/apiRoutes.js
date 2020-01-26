@@ -37,21 +37,19 @@ module.exports = function(app) {
     // console.log(friendsData[0].scores);
 
     var newFriendScore = req.body.scores;
-    console.log(newFriendScore);
     var totalDifferences = [];
 
     for (var i = 0; i < friendsData.length; i++) {
       var totalDifference = 0;
       for (var j = 0; j < friendsData.length; j++) {
         var difference = 0;
-        if (parseInt(newFriendScore[j]) > parseInt(friendsData[i][j])) {
-          console.log(parseInt(newFriendScore[j]));
+        if (parseInt(newFriendScore[j]) > parseInt(friendsData[i].scores[j])) {
           difference =
-            parseInt(newFriendScore[j]) - parseInt(friendsData[i][j]);
+            parseInt(newFriendScore[j]) - parseInt(friendsData[i].scores[j]);
           totalDifference += difference;
         } else {
           difference =
-            parseInt(friendsData[i][j]) - parseInt(newFriendScore[j]);
+            parseInt(friendsData[i].scores[j]) - parseInt(newFriendScore[j]);
           totalDifference += difference;
         }
       }

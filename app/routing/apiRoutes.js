@@ -34,8 +34,12 @@ module.exports = function(app) {
     var newFriendScore = req.body.scores;
     var totalDifferences = [];
 
+    // Find totalDifference
+    // Take the scores from the user and from each possible friend to find how close they are
+    // Loop through each possible friend
     for (var i = 0; i < friendsData.length; i++) {
       var totalDifference = 0;
+      // Loop through each score one at a time to find how close they are
       for (var j = 0; j < friendsData.length; j++) {
         var difference = 0;
         if (parseInt(newFriendScore[j]) > parseInt(friendsData[i].scores[j])) {
@@ -48,11 +52,13 @@ module.exports = function(app) {
           totalDifference += difference;
         }
       }
+      // Add each possibles friends totalDifference to an arry to be used later
       totalDifferences.push(totalDifference);
     }
 
     bestMatch = findSmallest(totalDifferences);
 
+    // Return the best match as a json object
     res.json(friendsData[bestMatch]);
   });
 };

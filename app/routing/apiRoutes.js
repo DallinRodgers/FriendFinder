@@ -5,6 +5,7 @@
 // ===============================================================================
 
 var friendsData = require("../data/friends");
+var bestMatch;
 
 // ===============================================================================
 // ROUTING
@@ -30,12 +31,6 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post("/api/friends", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-    // req.body is available since we're using the body parsing middleware
-    // console.log(req.body.scores);
-    // console.log(friendsData[0].scores);
-
     var newFriendScore = req.body.scores;
     var totalDifferences = [];
 
@@ -56,11 +51,9 @@ module.exports = function(app) {
       totalDifferences.push(totalDifference);
     }
 
-    console.log(totalDifferences);
+    bestMatch = findSmallest(totalDifferences);
 
-    var bestMatch = findSmallest(totalDifferences);
-
-    console.log(bestMatch);
+    res.json(friendsData[bestMatch]);
   });
 };
 

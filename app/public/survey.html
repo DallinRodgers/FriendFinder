@@ -178,19 +178,14 @@
         type="submit"
         id="submit"
       >
-        <i
-          class="fas fa-check-circle mr-2"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        ></i
-        >Submit
+        <i class="fas fa-check-circle mr-2"></i>Submit
       </button>
     </div>
 
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="bestMatchModal"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalLabel"
@@ -210,7 +205,8 @@
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <h3 id="bestMatch-name"></h3>
+            <img src="#" alt="Image of best match" id="bestMatch-img" />
           </div>
           <div class="modal-footer">
             <button
@@ -249,23 +245,23 @@
         // console.log("Submit clicked");
 
         // Form validation
-        function validateForm() {
-          var isValid = true;
+        function isFormFilled() {
+          var checkAllInput = true;
           $(".form-control").each(function() {
             if ($(this).val() === "") {
-              isValid = false;
+              checkAllInput = false;
             }
           });
 
           $(".chosen-select").each(function() {
             if ($(this).val() === "") {
-              isValid = false;
+              checkAllInput = false;
             }
           });
-          return isValid;
+          return checkAllInput;
         }
 
-        if (validateForm()) {
+        if (isFormFilled()) {
           var friendData = {
             name: $("#name").val(),
             photo: $("#photo").val(),
@@ -283,12 +279,12 @@
             ]
           };
 
-          console.log(friendData);
           $.post("/api/friends", friendData, function(data) {
-            console.log("show friend");
             console.log(data);
-            $("#match-name").text(data.name);
-            $("#match-img").attr("src", data.photo);
+            $("#bestMatch-name").text(data.name);
+            $("#bestMatch-img").attr("src", data.photo);
+
+            $("#bestMatchModal").modal("toggle");
           });
         } else {
           alert("Please answer all questions before submitting");

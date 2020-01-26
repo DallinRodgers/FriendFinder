@@ -58,13 +58,21 @@ module.exports = function(app) {
 
     console.log(totalDifferences);
 
-    // if (tableData.length < 5) {
-    //   tableData.push(req.body);
-    //   res.json(true);
-    // }
-    // else {
-    //   waitListData.push(req.body);
-    //   res.json(false);
-    // }
+    var bestMatch = findSmallest(totalDifferences);
+
+    console.log(bestMatch);
   });
 };
+
+function findSmallest(numbers) {
+  var indexOfSmallest = 0;
+  var smallestNumber = numbers[0];
+
+  for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] < smallestNumber) {
+      smallestNumber = numbers[i];
+      indexOfSmallest = i;
+    }
+  }
+  return indexOfSmallest;
+}

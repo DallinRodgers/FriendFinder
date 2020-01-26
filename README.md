@@ -1,5 +1,7 @@
 # FriendFinder
  This is a Node and Express.js appliction. 
+ 
+ Languages Used: Bootstrap 4, jQuery, Node.js, and Express.js
 
 View on Heroku: https://friendfinder-dallinrodgers.herokuapp.com/
 
